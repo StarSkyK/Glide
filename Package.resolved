@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SKTiled",
+        "repositoryURL": "https://github.com/mfessenden/SKTiled.git",
+        "state": {
+          "branch": "master",
+          "revision": "c0a15392bbfa8e5c307caa68e46ae5cd66720aa6",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -284,8 +284,12 @@ open class GlideEntity: GKEntity {
     
     var sortedComponents: [GKComponent] {
         return components.sorted { (left, right) -> Bool in
-            let leftPriority = ComponentPriorityRegistry.shared.priority(for: type(of: left))
-            let rightPriority = ComponentPriorityRegistry.shared.priority(for: type(of: right))
+            guard let leftGlide = left as? GlideComponent,
+                  let rightGlide = right as? GlideComponent else {
+                return true
+            }
+            let leftPriority = type(of: leftGlide).componentPriority
+            let rightPriority = type(of: rightGlide).componentPriority
             return leftPriority < rightPriority
         }
     }

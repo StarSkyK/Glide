@@ -112,7 +112,6 @@ open class GlideScene: SKScene {
     public init(collisionTileMapNode: SKTileMapNode?,
                 zPositionContainers: [ZPositionContainer]) {
         
-        ComponentPriorityRegistry.shared.initializeIfNeeded()
         self.zPositionContainers = zPositionContainers
         self.collisionTileMapNode = collisionTileMapNode
         

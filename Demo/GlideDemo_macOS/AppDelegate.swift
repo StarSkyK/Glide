@@ -37,7 +37,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        ComponentPriorityRegistry.shared.prettyPrintPriorityList()
         TransformNodeComponent.isDebugEnabled = true
         ColliderComponent.isDebugEnabled = true
         EntityObserverComponent.isDebugEnabled = true
